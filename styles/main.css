@@ -1,0 +1,581 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.2;
+    scroll-behavior: smooth;
+}
+
+.title-text {
+    font-family: "Open Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 40px;
+    color: #333333;
+}
+
+.regular-text {
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+    color: #666666;
+}
+
+header {
+    height: 100px;
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+    padding: 0 28px;
+}
+
+header .regular-text {
+    font-weight: 700;
+    font-size: 34px;
+    color: #333333;
+}
+
+.welcome {
+    background-image: url('../images/welcome.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 694px;
+    min-height: 694px;
+}
+
+.welcome .block {
+    background-color: #fff3e3;
+    padding: 3em 3.5em;
+    width: 655px;
+    position: relative;
+    top: 150px;
+    left: 51%;
+    border-radius: 12px;
+}
+
+.welcome .title-text {
+    font-size: 51px;
+}
+
+.welcome .title-text.subtitle {
+    font-size: 21px;
+    font-weight: 300;
+    color: #333333;
+}
+
+.welcome .accent {
+    color: #b88e2f;
+}
+
+.about-us {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.about-us>.container {
+    width: 898px;
+}
+
+.about-us .title-text {
+    margin-bottom: 0.8em;
+}
+
+.about-us .regular-text {
+    font-size: 20px;
+    color: #666666;
+    margin: 1em 0;
+}
+
+.statistics {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(250, 243, 234, 0.42);
+    padding: 100px 0;
+}
+
+.statistics .container {
+    display: flex;
+    justify-content: space-between;
+    width: 900px;
+}
+
+.statistics .block {
+    width: 240px;
+}
+
+.statistics .block .title-text {
+    font-size: 40px;
+    margin-bottom: 0.3em;
+}
+
+.statistics .block .title-text.subtitle {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.statistics .block .regular-text {
+    font-size: 18px;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.options h2.title-text {
+    margin-bottom: 1em;
+}
+
+.options .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 1200px;
+}
+
+.options .block img {
+    border-radius: 10px;
+}
+
+.options .block p.title-text {
+    font-size: 24px;
+    font-weight: 300;
+    margin-top: 1em;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.services h2.title-text {
+    margin-bottom: 1em;
+}
+
+.services .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 100px;
+    grid-template-areas:
+        "left middle right"
+        "button button right";
+    column-gap: 100px;
+    width: 1220px;
+}
+
+.services .card {
+    width: 340px;
+    box-shadow: 0 2px 5px #aaaaaa;
+    background-color: #f4f5f7;
+    cursor: pointer;
+}
+
+.services .card .head {
+    width: 340px;
+    height: 300px;
+    position: relative;
+}
+
+.services .card .head .title-text {
+    position: absolute;
+    font-size: 55px;
+    font-weight: 500;
+    color: #3a3a3a;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.services .card .body {
+    padding: 1em;
+}
+
+.services .left-card-container .head {
+    background-color: #fff3f3;
+}
+
+.services .middle-card-container .head {
+    background-color: #ffe7c7;
+}
+
+.services .right-card-container .head {
+    background-color: #ffd9a6;
+}
+
+.services .card .body p.title-text {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 0.5em;
+}
+
+.services .card .body ul.regular-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #898989;
+    margin-left: 1.5em;
+}
+
+.services .card .body ul.regular-text li {
+    line-height: 1.5;
+}
+
+.services .left-card-container {
+    grid-area: left;
+}
+
+.services .middle-card-container {
+    grid-area: middle;
+}
+
+.services .right-card-container {
+    grid-area: right;
+}
+
+.services .button-container {
+    grid-area: button;
+    display: flex;
+    justify-content: center;
+}
+
+.services button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 1em 2em;
+    width: fit-content;
+    cursor: pointer;
+    box-shadow: 5px 5px 5px #aaaaaa;
+}
+
+.services button.title-text {
+    font-size: 32px;
+    font-weight: 500;
+}
+
+.portfolio {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.portfolio h2.title-text {
+    margin-bottom: 1.2em;
+}
+
+.portfolio .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-content: space-evenly;
+    flex-wrap: wrap;
+    width: 1320px;
+    height: 860px;
+}
+
+.portfolio .block {
+    position: relative;
+    cursor: pointer;
+}
+
+.portfolio .block img {
+    filter: brightness(0.65);
+}
+
+.portfolio .block .text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.portfolio p.title-text {
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+.portfolio p.regular-text {
+    color: #ffffff;
+}
+
+.reviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.reviews h2.title-text {
+    margin-bottom: 0.2em;
+}
+
+.reviews p.title-text.subtitle {
+    font-size: 16px;
+    font-weight: 300;
+    color: #9f9f9f;
+    line-height: 1.4;
+}
+
+.reviews .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 940px;
+}
+
+.reviews .block {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    width: 280px;
+}
+
+.reviews .block h4.title-text {
+    margin-top: 10px;
+    margin-left: 3px;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 400;
+    color: #333333;
+}
+
+.reviews .block p.regular-text {
+    font-size: 16px;
+    font-weight: 300;
+    color: #333333;
+    margin-left: 3px;
+}
+
+.reviews .block .rating {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    margin: 5px 0 5px 3px;
+}
+
+.reviews .block .rating.title-text {
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.reviews .block .rating img {
+    padding: 3px 1px 0;
+    vertical-align: baseline;
+}
+
+.reviews .block .rating .vl {
+    border-left: 1px solid #9f9f9f;
+    height: 1.6em;
+}
+
+.reviews .block .time.title-text {
+    font-size: 13px;
+    font-weight: 400;
+    color: #9f9f9f;
+}
+
+.callback {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.callback>.container {
+    width: 640px;
+}
+
+.callback h2.title-text {
+    margin-bottom: 0.6em;
+}
+
+.callback p.title-text.subtitle {
+    font-size: 16px;
+    font-weight: 300;
+    color: #9f9f9f;
+    line-height: 1.4;
+}
+
+.callback-form {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+    transition: height 0.5s ease-in-out;
+    position: relative;
+}
+
+.callback-form>.container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 960px;
+}
+
+.callback-form .left {
+    width: 300px;
+}
+
+.callback-form .left .block {
+    display: flex;
+    align-items: flex-start;
+    column-gap: 30px;
+    margin: 2em 0;
+}
+
+.callback-form .left .block .title-text {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.callback-form .left .block .title-text .title {
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 0.4em;
+    line-height: 1;
+}
+
+.callback-form .right {
+    width: 500px;
+}
+
+.callback-form .left p.title-text:nth-child(1),
+.callback-form .right p.title-text:nth-child(1) {
+    font-size: 28px;
+    font-weight: 400;
+    margin-bottom: 0.4em;
+}
+
+.callback-form .left p.title-text:nth-child(2),
+.callback-form .right p.title-text:nth-child(2) {
+    font-size: 20px;
+    font-weight: 300;
+    color: #727272;
+}
+
+.callback-form .thanks {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.callback-form .thanks.activate {
+    opacity: 1;
+}
+
+.callback-form .thanks .title-text {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.callback-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.callback-form form label {
+    margin-top: 1.8em;
+}
+
+.callback-form form label.title-text {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+.callback-form form input[type="text"] {
+    border: 1px solid #9f9f9f;
+    border-radius: 10px;
+    padding: 1.7em;
+    margin-top: 1em;
+}
+
+.callback-form form input[type="text"]::placeholder {
+    color: #9f9f9f;
+}
+
+.callback-form form input[type="text"]:focus {
+    border: 1px solid #333333 !important;
+    outline-offset: 0px !important;
+    outline: #333333 !important;
+}
+
+.callback-form form input[type="text"].title-text {
+    font-size: 16px;
+    font-weight: 300;
+    color: #727272;
+}
+
+.callback-form form input[type="submit"] {
+    background-color: #B88e2f;
+    border: none;
+    border-radius: 10px;
+    padding: 1em 2em;
+    width: fit-content;
+    margin-top: 3em;
+    cursor: pointer;
+}
+
+.callback-form form input[type="submit"].title-text {
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 90px 0;
+    background-color: #faf3ea;
+}
+
+footer>.container {
+    display: flex;
+    justify-content: space-between;
+    width: 660px;
+}
+
+footer>.container .block {
+    display: flex;
+    column-gap: 10px;
+}
+
+footer .block p.title-text {
+    line-height: 1.6;
+}
+
+footer .block p.title-text:nth-child(1) {
+    font-size: 25px;
+    font-weight: 500;
+}
+
+footer .block p.title-text:nth-child(2) {
+    font-size: 20px;
+    font-weight: 300;
+    color: #898989;
+}

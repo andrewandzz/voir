@@ -1,0 +1,164 @@
+.welcome {
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+}
+
+.welcome.activate {
+    opacity: 1;
+}
+
+.welcome .block {
+    transition: transform 1.1s ease-in-out;
+    transform: translateY(-1em);
+}
+
+.welcome.activate .block {
+    transform: translateY(0);
+}
+
+.options .container .block {
+    transition: opacity 1s ease-in-out, transform 0.5s ease-in-out;
+    opacity: 0;
+    transform: translateX(-1em);
+}
+
+.options.activate .container .block {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.options .container .block:nth-child(2) {
+    transition-delay: 0.5s;
+}
+
+.options .container .block:nth-child(3) {
+    transition-delay: 1s;
+}
+
+.services .card {
+    transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.services .card:hover {
+    box-shadow: 0 3px 8px #aaaaaa;
+    transform: scale(1.05);
+}
+
+.services button {
+    transition: background-color 0.3s ease-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.services button.activate {
+    animation: button-activation 1s 2 alternate ease-in-out;
+}
+
+.services button:hover {
+    background-color: #00a7ff;
+    box-shadow: 10px 10px 10px #aaaaaa;
+    transform: scale(1.1);
+}
+
+@keyframes button-activation {
+    0% {
+        transform: scale(1);
+        background-color: #007bff;
+        box-shadow: 5px 5px 5px #aaaaaa;
+    }
+
+    50% {
+        transform: scale(1.15);
+        background-color: #00a7ff;
+        box-shadow: 10px 10px 10px #aaaaaa;
+    }
+
+    100% {
+        transform: scale(1);
+        background-color: #007bff;
+        box-shadow: 5px 5px 5px #aaaaaa;
+    }
+}
+
+.portfolio .block {
+    transition: transform 0.5s ease-in-out;
+}
+
+.portfolio .block:hover {
+    transform: scale(1.1);
+}
+
+.portfolio .block img {
+    transition: filter 0.5s ease-in-out;
+}
+
+.portfolio .block:hover img {
+    filter: brightness(0.9);
+}
+
+.callback-form form input[type="submit"] {
+    transition: background-color 0.3s ease-out, box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.callback-form form input[type="submit"]:hover {
+    background-color: #cda13c;
+    box-shadow: 3px 3px 5px #aaaaaa;
+    transform: scale(1.1);
+}
+
+@property --num200 {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+@property --num5 {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+@property --num20 {
+    syntax: "<integer>";
+    initial-value: 0;
+    inherits: false;
+}
+
+.statistics.activate .block:nth-child(1) p.title-text:first-child {
+    animation: counter-value 2s 1 alternate forwards cubic-bezier(0, 0, 0.25, 1);
+    counter-reset: num200 var(--num200);
+}
+
+.statistics.activate .block:nth-child(1) p.title-text:first-child::before {
+    content: counter(num200);
+}
+
+.statistics.activate .block:nth-child(2) p.title-text:first-child {
+    animation: counter-value 2s 1 alternate forwards cubic-bezier(0, 0, 0.25, 1);
+    counter-reset: num5 var(--num5);
+}
+
+.statistics.activate .block:nth-child(2) p.title-text:first-child::before {
+    content: counter(num5);
+}
+
+.statistics.activate .block:nth-child(3) p.title-text:first-child {
+    animation: counter-value 2s 1 alternate forwards cubic-bezier(0, 0, 0.25, 1);
+    counter-reset: num20 var(--num20);
+}
+
+.statistics.activate .block:nth-child(3) p.title-text:first-child::before {
+    content: counter(num20);
+}
+
+@keyframes counter-value {
+    from {
+        --num200: 0;
+        --num5: 0;
+        --num20: 0;
+    }
+
+    to {
+        --num200: 200;
+        --num5: 5;
+        --num20: 20;
+    }
+}
